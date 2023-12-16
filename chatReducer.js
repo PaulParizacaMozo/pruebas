@@ -3,7 +3,7 @@ const chatReducer = (state = { chatUsers: [], loading: false, error: false }, ac
         case "SAVE_USER":
             return { ...state, chatUsers: [...state.chatUsers, action.data] };
         case "___":
-            return 0;
+            return { chatUsers: [], loading: false, error: false };
         default:
             return state;
     }
