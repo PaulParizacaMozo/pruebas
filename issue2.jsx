@@ -139,29 +139,28 @@ const Auth = () => {
             }}
           >
             *Confirm password is not same
-          </span>
-          <div>
-            <span
-            style={{
-              fontSize: "12px",
+            <button
+              style={{
+                fontSize: "12px",
                 cursor: "pointer",
                 textDecoration: "underline",
-            }}
-            onClick={() => {
-              resetForm();
-              setIsSignUp((prev) => !prev);
-            }}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
+                border: "none",
+                background: "none",
+                padding: "0",
+              }}
+              onClick={() => {
                 resetForm();
                 setIsSignUp((prev) => !prev);
-              }
-            }}
-            role="button"
-            tabIndex={0}
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  resetForm();
+                  setIsSignUp((prev) => !prev);
+                }
+              }}
             >
-            {isSignUp ? "Already have an account Login" : "Don't have an account Sign up"}
-            </span>            
+              {isSignUp ? "Already have an account Login" : "Don't have an account Sign up"}
+            </button>
             <button
               className="button infoButton"
               type="Submit"
@@ -177,3 +176,4 @@ const Auth = () => {
 };
 
 export default Auth;
+
