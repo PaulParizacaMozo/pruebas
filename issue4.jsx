@@ -49,9 +49,13 @@ const User = ({ person }) => {
 User.propTypes = {
   person: PropTypes.shape({
     firstname: PropTypes.string.isRequired,
-    username: PropTypes.string.isRequired,
+    username: PropTypes.string,
+    followers: PropTypes.string,
+    followers.includes: PropTypes.string,
+    profilePicture: PropTypes.string,
+    followers.id: PropTypes.string,
     // Agrega más validaciones según sea necesario
-  }).isRequired,
+  }),
 };
 
 export default User;
