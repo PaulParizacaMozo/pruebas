@@ -139,6 +139,15 @@ const Auth = () => {
             }}
           >
             *Confirm password is not same
+          </span>
+          <div>
+            <button
+              className="button infoButton"
+              type="Submit"
+              disabled={loading}
+            >
+              { buttonText }
+            </button>
             <button
               style={{
                 fontSize: "12px",
@@ -152,21 +161,8 @@ const Auth = () => {
                 resetForm();
                 setIsSignUp((prev) => !prev);
               }}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  resetForm();
-                  setIsSignUp((prev) => !prev);
-                }
-              }}
             >
               {isSignUp ? "Already have an account Login" : "Don't have an account Sign up"}
-            </button>
-            <button
-              className="button infoButton"
-              type="Submit"
-              disabled={loading}
-            >
-              { buttonText }
             </button>
           </div>
         </form>
