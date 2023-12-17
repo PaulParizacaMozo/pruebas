@@ -7,6 +7,6 @@ const chatReducer = (state = { chatUsers: [], loading: false, error: false }, ac
         default:
             return state;
     }
-};
+}
 
 export default chatReducer;
